@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  mongodb:
+    restart: always
+    image: mongo
+  fas:
+    build: .
+    ports:
+      - "9527:9527"
+    restart: always
